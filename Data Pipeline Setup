@@ -32,6 +32,5 @@ This document describes the setup of the data pipeline used in the NYC Taxi Data
 - Connect **Power BI** to the **Presentation Layer**.
 - Build interactive visualizations to analyze taxi trip trends.
 
-## Resources
-- [Fabric-NYC-Taxi-Data-Project Wiki](https://github.com/malvik01/Fabric-NYC-Taxi-Data-Project/wiki)
+
 
