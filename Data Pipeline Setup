@@ -1,0 +1,37 @@
+# Data Pipeline Setup
+
+## Overview
+This document describes the setup of the data pipeline used in the NYC Taxi Data Analysis project. The pipeline consists of three main layers: **Landing Layer, Staging Layer, and Presentation Layer**.
+
+## 1. Landing Layer
+- **Purpose**: Stores raw NYC Taxi data.
+- **Process**:
+  1. Download trip record data from [TLC Website](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+  2. Use **Microsoft Fabric Data Lakehouse** to store the raw files.
+  3. Ensure data integrity before processing.
+
+## 2. Staging Layer
+- **Purpose**: Transforms raw data into a structured format.
+- **Process**:
+  1. Use **Data Factory Pipelines** to load data into staging tables.
+  2. Perform **basic transformations** (data type conversions, filtering, deduplication).
+  3. Store cleaned data in Fabric's staging tables.
+
+## 3. Presentation Layer
+- **Purpose**: Prepares data for analysis and visualization.
+- **Process**:
+  1. Use **Dataflows** to create aggregated tables.
+  2. Optimize performance with **Stored Procedures**.
+  3. Load final tables into the **Power BI** dataset.
+
+## Optimization: Replacing Dataflows with Stored Procedures
+- To improve performance, Dataflows are replaced with **SQL Stored Procedures**.
+- This ensures faster query execution and better data management.
+
+## Next Steps
+- Connect **Power BI** to the **Presentation Layer**.
+- Build interactive visualizations to analyze taxi trip trends.
+
+## Resources
+- [Fabric-NYC-Taxi-Data-Project Wiki](https://github.com/malvik01/Fabric-NYC-Taxi-Data-Project/wiki)
+
